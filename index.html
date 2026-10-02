@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Novel Library</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        Novel<span>Library</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#books">Books</a>
+        <a href="#genres">Genres</a>
+        <a href="#favorites">Favorites</a>
+      </nav>
+
+      <div class="search-container">
+
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <input type="text" class="search-input hidden" placeholder="Search books..." />
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-content">
+
+        <div class="hero-text">
+
+          <p class="hero-small-title">
+            WELCOME TO
+          </p>
+
+          <h1>
+            Discover Your Next
+            <span>Favorite Novel</span>
+          </h1>
+
+          <p>
+            Explore thousands of novels and discover
+            stories that stay with you forever.
+          </p>
+
+          <a href="#books" class="hero-btn">
+            Explore Books
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED ================= -->
+
+    <section class="featured-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <p>FEATURED</p>
+          <h2>Featured Novels</h2>
+        </div>
+
+        <div class="slider">
+
+          <button class="slider-btn prev-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="slider-window">
+
+            <div class="slider-track"></div>
+
+          </div>
+
+          <button class="slider-btn next-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+        </div>
+
+        <div class="slider-dots"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= BOOKS ================= -->
+
+    <section class="books-section" id="books">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p>EXPLORE</p>
+
+          <h2>Popular Novels</h2>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filter-buttons">
+
+          <button class="filter-btn active" data-filter="All">
+            All
+          </button>
+
+          <button class="filter-btn" data-filter="Romance">
+            Romance
+          </button>
+
+          <button class="filter-btn" data-filter="Mystery">
+            Mystery
+          </button>
+
+          <button class="filter-btn" data-filter="Fantasy">
+            Fantasy
+          </button>
+
+          <button class="filter-btn" data-filter="Thriller">
+            Thriller
+          </button>
+
+          <button class="filter-btn" data-filter="Historical">
+            Historical
+          </button>
+
+          <button class="filter-btn" data-filter="Adventure">
+            Adventure
+          </button>
+
+        </div>
+
+
+        <!-- BOOK GRID -->
+
+        <div class="books-grid"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= GENRES ================= -->
+
+    <section class="genres-section" id="genres">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p>BROWSE BY</p>
+
+          <h2>Genres</h2>
+
+        </div>
+
+
+        <div class="genres-grid">
+
+          <button class="genre-card">
+            <i class="fa-solid fa-heart"></i>
+            <span>Romance</span>
+          </button>
+
+          <button class="genre-card">
+            <i class="fa-solid fa-user-secret"></i>
+            <span>Mystery</span>
+          </button>
+
+          <button class="genre-card">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Fantasy</span>
+          </button>
+
+          <button class="genre-card">
+            <i class="fa-solid fa-mask-face"></i>
+            <span>Thriller</span>
+          </button>
+
+          <button class="genre-card">
+            <i class="fa-solid fa-landmark"></i>
+            <span>Historical</span>
+          </button>
+
+          <button class="genre-card">
+            <i class="fa-solid fa-compass"></i>
+            <span>Adventure</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FAVORITES ================= -->
+
+    <section class="favorites-section" id="favorites">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p>YOUR COLLECTION</p>
+
+          <h2>Favorite Novels</h2>
+
+        </div>
+
+        <div class="favorites-grid"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= MODAL ================= -->
+
+  <div class="modal hidden">
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body">
+
+        <div class="modal-cover-wrapper">
+
+          <img class="modal-cover" src="" alt="" />
+
+        </div>
+
+
+        <div class="modal-info">
+
+          <span class="modal-genre"></span>
+
+          <h2 class="modal-title"></h2>
+
+          <p class="modal-author"></p>
+
+          <p class="modal-rating"></p>
+
+          <p class="modal-description"></p>
+
+
+          <div class="book-meta">
+
+            <div>
+              <span>Pages</span>
+              <strong class="modal-pages"></strong>
+            </div>
+
+            <div>
+              <span>Year</span>
+              <strong class="modal-year"></strong>
+            </div>
+
+          </div>
+
+
+          <button class="modal-favorite-btn">
+            ♡ Add to Favorites
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <a href="#home" class="logo">
+        Novel<span>Library</span>
+      </a>
+
+      <p>
+        Discover stories. Explore worlds. Find your next favorite novel.
+      </p>
+
+      <p class="copyright">
+        © 2026 NovelLibrary. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+
+</html>
