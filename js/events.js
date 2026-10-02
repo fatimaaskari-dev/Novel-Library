@@ -68,6 +68,7 @@ export function setupEvents() {
       });
 
       searchInput.classList.add("hidden");
+      searchInput.value = "";
     }
   });
 
